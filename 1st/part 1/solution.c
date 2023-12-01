@@ -6,10 +6,6 @@
 
 #define FILENAME "input.txt"
 
-int compute(char *buf, const int n) {
-    
-}
-
 int main () {
     FILE *f;
     char buf[500];
@@ -32,4 +28,5 @@ int main () {
         printf("    Total after: %d\n", total);
     }
     printf("total = %d", total);
+    return 0;
 }
