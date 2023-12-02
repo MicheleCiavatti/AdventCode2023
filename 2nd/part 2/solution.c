@@ -108,9 +108,6 @@ int computeLine(const int toSkip) {
     set[j] ='\0';
     //printf("Set: %s\n", set);
     computeSet(j, set);
-    if (min_blue == 100) min_blue = 1;
-    if (min_green == 100) min_green = 1;
-    if (min_red == 100) min_red = 1;
     free(set);
     printf("blue: %d / green: %d / red: %d\n", min_blue, min_green, min_red);
     return min_blue * min_green * min_red;
