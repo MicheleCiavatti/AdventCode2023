@@ -10,22 +10,21 @@
 
 char mat[ROWS][COLUMNS];
 
-/*---------------------------------------EXPLANATION---------------------------------------*/
-/*Given [i,j] indexes of a symbol not digit and not '.', we need to check its sorroundings
-for digits
+/*---------------------------------------------------EXPLANATION---------------------------------------------------*/
+/*Given [i,j] indexes of a symbol not digit and not '.', we need to check its sorroundings for digits
                                 [i-1,j-1]    [i-1,j  ]    [i-1,j+1]
                                 [i  ,j-1]    [i  ,j  ]    [i  ,j+1]
                                 [i+1,j-1]    [i+1,j  ]    [i+1,j+1]
-Let's assume that we found a digit in position [n,m]. To compute the number, we need to:
-- walk backwards n, n-1, n-2, ..., until we n-k is not a digit or n-k == 0. Every time we find a digit in
-position [n][n-k], we modify mat[n][n-k] = '.'. We create an array
-    BackArr = [n, n-1, ..., n-k] ----REVERSED---> [n-k, ..., n-1,n] 
+Let's assume that we found a digit in position [m,n]. To compute the number, we need to:
+- walk backwards n, n-1, n-2, ..., until n-k is not a digit or n-k == 0. Every time we find a digit in
+position [m][n-k], we modify mat[m][n-k] = '.'. We create an array
+    BackArr = [mat[m][n], mat[m][n-1], ..., mat[m][n-k]] ----REVERSED---> [mat[m][n-k], ..., mat[m][n-1], mat[m][n]] 
 - walk onwards n, n+1, n+2, ..., untile n+h is not a digit or n+h == COLUMNS. Every time we find a digit in
-position [n][n-k], we modify mat[n][n-k] = '.'. We create an array
-    OnArr = [n, n+1, ...]
-Then we remove the last element of BackArr (n), so that we don't count it twice.
-We concatenate the two arrays (they're string arrays), and use atoi on the result.
-*/
+position [m][n+h], we modify mat[n][n+h] = '.'. We create an array
+    OnArr = [mat[m][n], mat[m][n+1], ...]
+Then we remove the last element of BackArr (mat[m][n]), so that we don't count it twice.
+We concatenate the two arrays (they're string arrays), and use atoi on the result.                                 */
+/*-----------------------------------------------------------------------------------------------------------------*/
 
 // function to reverse a string
 void strrev(char* str)
