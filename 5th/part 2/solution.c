@@ -20,12 +20,6 @@
 #define HUMIDITY_INDEX 6
 #define LOCATION_INDEX 7
 #define LIMIT ULLONG_MAX
-/*----------------------------------------------EXPLANATION----------------------------------------------*/
-/*
-Each map represents: DESTINATION SOURCE RANGE_LENGTH
-The first phase is about the SEED: we need to extract the number of every seed.
-Then, we proceed: SEED -> SOIL -> FERTILIZER -> WATER -> LIGHT -> TEMPERATURE -> HUMIDITY -> LOCATION
-*/
 
 char buf[10000];
 int phase = 0;
