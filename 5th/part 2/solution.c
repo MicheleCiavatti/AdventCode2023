@@ -6,8 +6,8 @@
 #include <stdbool.h>
 #include "solution.h"
 #include <limits.h>
-//197291893 197291893
-//53395138
+
+
 #define INPUT "input.txt"
 #define MAX_RANGES 100
 #define STEP_AMOUNT 8
