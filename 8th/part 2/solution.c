@@ -22,10 +22,10 @@ nodes that terminate with a Z in vecZ.
 vecA = [XXA, XXA, XXA, ..., XXA] where X = any letter
 vecZ = [XXZ, XXZ, XXZ, ..., XXZ] where X = any letter
 We preserve the mapping that we used for the previous part, therefore vecA and vecZ will
-contains unsigned integers, each obtained by the 3 chars that identify a node uniquely.
+contain unsigned integers, each obtained by the 3 chars that identify a node uniquely.
 Then, for each node in vecA, we follow the instructions (LLRRLL...) given as input to 
 move it across the map, and stop when it reaches a point in vecZ: we save the number of 
-steps needed in an array cycles[]. We do this for everyelement in vecA. 
+steps needed in an array cycles[]. We do this for every element in vecA. 
 Consider i the index of element in vecA that we are processing:
     counter = 0;
 - counter++. vecA[i] ----FOLLOW_DIRECTIONS----> new vecA[i]; vecA[i] is present in vecZ? NO
