@@ -106,21 +106,6 @@ unsigned int max(const unsigned int a[], const int n) {
     return max;
 }
 
-unsigned int lcm(const unsigned int a[], const int n) {
-    unsigned int i = max(a, n);
-    bool flag = false;
-    while (!flag) {
-        printf("i: %u\n", i);
-        flag = true;
-        for (unsigned int j = 0; j < n; j++) {
-            if (a[j] % i != 0)
-                flag = false;
-        }
-        i++;
-    }
-    return i;
-}
-
 //Function returns GCD of a and b
 unsigned long long findGCD(unsigned long long a, unsigned long long b){
     if(b==0)
